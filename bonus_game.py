@@ -2,7 +2,7 @@ from speech import speech
 from random import choice, randint
 import time
 
-# Difficulty levels
+# Livelli di difficoltà
 levels = {
     "easy": ["agenda", "ami", "souris"],
     "medium": ["ordinateur", "algorithme", "développeur"],
@@ -10,14 +10,13 @@ levels = {
 }
 
 def play_game(level):
-    words = levels.get(level, [])  # Selecting the words based on difficulty level
+    words = levels.get(level, [])  # Selezione delle parole in base al livello di difficoltà
     if not words:
         print("Incorrect difficulty level.")
         return
 
     score = 0
-    num_attempts = 3  # The number of attempts per word
-
+    num_attempts = 3  # Il numero di tentativi per parola
     for _ in range(len(words)):
         random_word = choice(words)
         print(f"Please pronounce the word {random_word}")
@@ -30,7 +29,7 @@ def play_game(level):
         else:
             print(f"Something is wrong. The word is: {random_word}")
 
-        time.sleep(2)  # Pause between words
+        time.sleep(2)  # Pausa tra le parole
         
     print(f"Game over! Your score is: {score}/{len(words)}")
 
