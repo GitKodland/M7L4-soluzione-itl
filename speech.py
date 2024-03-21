@@ -8,7 +8,7 @@ def speech_fr():
 
         recog.adjust_for_ambient_noise(audio_file)
         audio = recog.listen(audio_file)
-        return recog.recognize_google(audio, language="fr-FR")
+        return recog.recognize_google(audio, language="it-IT")
 
 def speech_en():
     mic = speech_recog.Microphone()
